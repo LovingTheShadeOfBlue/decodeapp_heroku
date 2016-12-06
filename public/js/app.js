@@ -114,7 +114,7 @@ class App{
 		this.recipe = [
 			{
 				"id": 1,
-				"name": "Utan",
+				"name": "Reese",
 				"description": "Utan or Utan Bisaya is a vegetable soup dish popular in the Visayan region, commonly it consists different vegetables like malunggay leaves, okra, squash, taro, vine spinach (alugbati), eggplants, snake beans (sitaw), ginger and tomatoes cooked together with either pork, fish or shrimps. Similar to laswa and the only difference it the vegetable used, are the ones commonly found in the Visayas.",
 				"photo": "img/utan.jpg",
 				"ingredients":[
@@ -177,7 +177,7 @@ class App{
 			},
 			{
 				"id": 2,
-				"name": "Tolang Bisaya",
+				"name": "Ivan",
 				"description": "One of the things and considered as very special food in Iligan City that is also known for fresh seafood capital in the region. Most fish sold in our local market here in Pila came from Laguna Lake, bangus (milkfish), tilapia, dalag (mudfish), hito and kanduli (catfish).",
 				"photo": "img/tolangbisaya.jpg",
 				"ingredients":[
@@ -222,7 +222,7 @@ class App{
 			},
 			{
 				"id": 3,
-				"name": "Pork Humba Bisaya",
+				"name": "April",
 				"description": "Humba (HOOM-BAA) is a Filipino dish similar to adobo, and popular in central part of the Philippines, particularly among the Visayan speaking people. The method of cooking is similar to adobo (chicken or lean pork) by simmering the meat in a marinade of soy sauce, vinegar, brown sugar, bay leaf, and peppercorns. The difference is the type of meat used which is pork belly, which has skin, fat, and lean portions.",
 				"photo": "img/porkhumbabisaya.jpg",
 				"ingredients":[
@@ -280,7 +280,7 @@ class App{
 			},
 			{
 				"id": 4,
-				"name": "Manok Adobo Sa Gata",
+				"name": "Ate Chatz",
 				"description": "Masarap ang “native na manok” sa lutuing ito.  Masarap lalo na kapag ‘sinagkotsa ito sa tanglad” bago ito lagyan ng gata at luyang dilaw.",
 				"photo": "img/manokadobosagata.jpg",
 				"ingredients":[
