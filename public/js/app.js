@@ -27,7 +27,7 @@ class App{
 
       {
         "id": 3,
-        "image": "img/Charlie.jpg",
+        "image": "img/charlie.jpg",
         "RealName": " Charles Otto Puth Jr.",
         "StageName": " Charlie Puth",
         "YearsActive": " 1998-present", 
