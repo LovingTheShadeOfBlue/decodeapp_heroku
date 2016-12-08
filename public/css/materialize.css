@@ -20,6 +20,31 @@
   color: #fdeaeb !important;
 }
 
+form {
+
+  background: linear-gradient(bottom, #241F1F, #3CD0FD 175px);
+  background: -webkit-linear-gradient(bottom, #21C8FB, #0A15E7  175px);
+  background: -moz-linear-gradient(bottom, #241F1F, #241F1F 175px);
+  margin: auto;
+  position: relative;
+  width: 450px;
+  height:990px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 24px;
+  font-weight: bold;
+  color: #81817A;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #FFF802;
+  border: inset 1px solid #FAF203;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
 .materialize-red.lighten-4 {
   background-color: #f8c1c3 !important;
 }
@@ -2159,7 +2184,14 @@ html {
  * Remove default margin.
  */
 body {
-  margin: 0;
+ background:url(../img/bg2.jpg);
+background-repeat:no-repeat;
+background-size:cover;
+background-attachment: fixed;
+background-position: center center;
+  
+  
+
 }
 
 /* HTML5 display definitions
