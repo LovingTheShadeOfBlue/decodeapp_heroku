@@ -6,13 +6,13 @@ class App{
      
       {
         "id": 1,
-	        "image": "img/taytay.jpg",
-	        "RealName": " Taylor Alison Swift",
-	        "StageName": " Taylor Swift",
-	        "YearsActive": " 2004-present", 
-	        "Birthday": " December 13, 1989 (age 26)",
-	        "Genres": " Country, Pop",  
-	        "Description":" Is an American singer-songwriter. One of the most popular contemporary female recording artists, she is known for narrative songs about her personal life, which has received much media attention.",
+          "image": "img/taytay.jpg",
+          "RealName": " Taylor Alison Swift",
+          "StageName": " Taylor Swift",
+          "YearsActive": " 2004-present", 
+          "Birthday": " December 13, 1989 (age 26)",
+          "Genres": " Country, Pop",  
+          "Description":" Is an American singer-songwriter. One of the most popular contemporary female recording artists, she is known for narrative songs about her personal life, which has received much media attention.",
       },
       {
         "id": 2,
@@ -22,7 +22,7 @@ class App{
         "YearsActive": " 1997-present", 
         "Birthday": " September 04, 1981 (age 35)",
         "Genres": " R&B, Pop",
-        "Description":" Is an American singer-songwriter. One of the most popular contemporary female recording artists, she is known for narrative songs about her personal life, which has received much media attention.",  
+        "Description":" Is an American singer, songwriter and actress. Born and raised in Houston, Texas, she performed in various singing and dancing competitions as a child and rose to fame in the late 1990s as lead singer of R&B girl-group Destiny's Child.",  
       },
 
       {
@@ -33,7 +33,7 @@ class App{
         "YearsActive": " 1998-present", 
         "Birthday": " December 2, 1991 (age 24)",
         "Genres": " R&B, Pop",  
-        "Description":" Is an American singer-songwriter. One of the most popular contemporary female recording artists, she is known for narrative songs about her personal life, which has received much media attention.",
+        "Description":" Is an American singer, songwriter and record producer who gained his initial recognition by the viral success of his song posts to YouTube.",
       },
 
       {
@@ -44,7 +44,7 @@ class App{
         "YearsActive": " 1994-present", 
         "Birthday": " May 08, 1975 (age 41)",
         "Genres": " Pop, Latin Pop, Dance-pop, Electropop",
-        "Description":" Is an American singer-songwriter. One of the most popular contemporary female recording artists, she is known for narrative songs about her personal life, which has received much media attention.",  
+        "Description":" Is a Spanish singer, songwriter, actor and record producer. He is widely regarded as the King of Latin Pop. Iglesias also has 14 number-ones on Billboard's Dance charts, more than any other male artist.",  
       },
       {
         "id": 5,
@@ -54,7 +54,7 @@ class App{
         "YearsActive": " 2001-present", 
         "Birthday": " March 28, 1986 (age 30)",
         "Genres": " Electropop, Dance-pop",  
-        "Description":" Is an American singer-songwriter. One of the most popular contemporary female recording artists, she is known for narrative songs about her personal life, which has received much media attention.",
+        "Description":" is an American singer, songwriter and actress. She performed initially in theater, appearing in high school plays, and studied at CAP21 through NYU's Tisch School of the Arts before dropping out to pursue a musical career.",
       },
       {
         "id": 6,
@@ -64,7 +64,7 @@ class App{
         "YearsActive": " 1979-present", 
         "Birthday": " August 16, 1958 (age 58)",
         "Genres": " Pop, Dance, Electronic rock",  
-        "Description":" Is an American singer-songwriter. One of the most popular contemporary female recording artists, she is known for narrative songs about her personal life, which has received much media attention.",
+        "Description":" is an American singer, songwriter, actress, and businesswoman. She achieved popularity by pushing the boundaries of lyrical content in mainstream popular music and imagery in her music videos, which became a fixture on MTV.",
       },
     ];
 
@@ -84,20 +84,20 @@ class App{
   createDesign(){
     let image = document.getElementById('image1');
     let RealName = document.getElementById('realname1');
-        let StageName = document.getElementById('stagename1');
-            let YearsActive = document.getElementById('yearsactive1');
-                let Birthday = document.getElementById('birthday1');
-                    let Genres = document.getElementById('genres1');
-                        let Description = document.getElementById('description1');
+    let StageName = document.getElementById('stagename1');
+    let YearsActive = document.getElementById('yearsactive1');
+    let Birthday = document.getElementById('birthday1');
+    let Genres = document.getElementById('genres1');
+    let Description = document.getElementById('description1');
   
     let home = {      
       "image": image.value,
       "RealName": RealName.value,
-         "StageName": StageName.value,
+      "StageName": StageName.value,
       "YearsActive": YearsActive.value,
-         "Birthday": Birthday.value,
+      "Birthday": Birthday.value,
       "Genres": Genres.value,
-         "Description": Description.value,
+      "Description": Description.value,
     
     };
 
@@ -118,6 +118,32 @@ class App{
     }   
     this.MusicList();
   }
+
+ updateArtistNow(id){
+
+  id = id+1;
+      let ArtistDummy = {
+        "id" :  id,
+        "image" : $('#ArtistName3').val(),
+        "StageName" : $('#ArtistName').val(),
+        "RealName" : $('#ArtistName1').val(),
+        "YearsActive" : $('#ArtistName2').val(),
+        "Genres" : $('#ArtistName4').val(),
+        "Description" : $('#MusicDescription').val()
+      }
+
+    let r = this.home;
+    for(let i=0;i<r.length;i++){
+      if(r[i].id == id){
+        r[i] = ArtistDummy;
+        break;
+      }
+    }
+
+    this.MusicList();
+  }
+
+
 
   MusicSearchById(id){
 
@@ -156,32 +182,35 @@ class Component extends App{
     <a class="carousel-item" href="#one!"><img src="img/ml.jpg"></a>
     <a class="carousel-item" href="#two!"><img src="img/let.jpg"></a>
     <a class="carousel-item" href="#three!"><img src="img/ms.jpg"></a>
-    <a class="carousel-item" href="#four!"><img src="img/ml.jpg"></a>
+    <a class="carousel-item" href="#four!"><img src="img/mmm.jpg"></a>
   </div>
 
 
-   
-        
-    <nav>
-      <div class="nav-wrapper  blue lighten-2">
-          <a href="#" onclick="component.homepage()" class="brand-logo purple-text text-darken-4">Music Artist App</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li>
-          <a href="#"onclick="component.homepage()"><i class="material-icons left">stay_primary_portrait</i>Music Home</a>
-      </li>
-      <li>
-        <a href="#"onclick="component.createMusicArtist()"><i class="material-icons left">queue</i>Add Artist</a>  
-      <li>   
-        <a href="#"onclick="component.MusicList()"><i class="material-icons left">queue_music</i>Music List</a>  
-      </li>
-      <li>   
-        <a href="#"onclick="component.MusicSearch()"><i class="material-icons left">search</i>Search Music Artist</a>  
-      </li>
 
-        </ul>
-      </div>
-    </nav>
-
+<ul id="dropdown1" class="dropdown-content">
+  <li>
+        <a href="#"onclick="component.createMusicArtist()"><i class="material-icons left">queue</i>Add</a>  
+        <a href="#"onclick="component.MusicList()"><i class="material-icons left">search</i>Search</a>  
+       
+      </li>
+  <li class="divider"></li> 
+  
+</ul>
+<nav>
+  <div class="nav-wrapper"  blue lighten-2">
+    <a href="#" onclick="component.homepage()" class="brand-logo purple-text text-darken-4"><b>Music Artist App</b></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>
+           <a href="#"onclick="component.homepage()"><i class="material-icons left">stay_primary_portrait</i>Music Home</a>
+      </li>
+      <li>   
+           <a href="#"onclick="component.MusicList()"><i class="material-icons left">queue_music</i>Music List</a>  
+      </li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons left"> view_module</i>More<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav>
 
         <div id="MusicHome"></div>
         <div id="musicRecent"></div>
@@ -189,6 +218,7 @@ class Component extends App{
         <div id="ViewList"></div>
         <div id="MusicList"></div>
         <div id="createMusicArtist"></div>
+         <div id="updateArtist"></div>
         
 
 
@@ -341,7 +371,7 @@ html+=`
     let r = this.MusicSearchById(id);
     let html = `
              <div class="col s12 m7">
-                <h2 class="header">Horizontal Card</h2>
+                <h2 class="header"></h2>
                 <div class="card horizontal">
                   <div class="card-image">
                     <img src="${r.image}">
@@ -349,14 +379,20 @@ html+=`
                   <div class="card-stacked">
                     <div class="card-content">
                     <p>Real Name: ${r.RealName}</p>
-              		<p>Stage Name: ${r.StageName}</p>
-            		  <p>Years Active: ${r.YearsActive}</p>
-              		<p>Birthday: ${r.Birthday}</p>
-             		 <p>Genres: ${r.Genres}</p>
+                  <p>Stage Name: ${r.StageName}</p>
+                  <p>Years Active: ${r.YearsActive}</p>
+                  <p>Birthday: ${r.Birthday}</p>
+                 <p>Genres: ${r.Genres}</p>
+                 <p>Description: ${r.Description}</p>
                     </div>
                     <div class="card-action" Medium>
-                      <span onclick="component.MusicDelete(${r.id})" class="new badge large red" data-badge-caption="">Delete Base</span>
-                <span onclick="component.MusicList()" class="new badge large" data-badge-caption="">Back to List</span>
+
+                   <button onclick="component.MusicDelete(${r.id})" class="btn waves-effect waves-light">Delete</button>
+                   <button onclick="component.MusicList()" class="btn waves-effect waves-light">Back</button>
+                   <button onclick="component.updateArtist(${r.id})" class="btn waves-effect waves-light">Update</button>
+
+
+                     
                     </div>
                   </div>
                 </div>
@@ -375,6 +411,7 @@ html+=`
     
     $('#ViewList').show();
     $('#musicRecent').hide();
+    $('#updateArtist').hide();
     $('#MusicList').hide();
     $('#createMusicArtist').hide();
     $('#MusicHome').hide();
@@ -454,10 +491,11 @@ html+=`
     
     $('#MusicList').show();
     $('#ViewList').hide();
+    $('#updateArtist').hide();
     $('#musicRecent').hide();
     $('#createMusicArtist').hide();       
     $('#MusicHome').hide();
-      $('#homepage').hide();      
+    $('#homepage').hide();      
   
   }
 
@@ -495,6 +533,7 @@ html+=`
     
     $('#MusicList').show();
     $('#ViewList').hide();
+    $('#updateArtist').hide();
     $('#musicRecent').hide();  
     $('#createMusicArtist').hide();
     $('#MusicHome').hide();   
@@ -542,8 +581,9 @@ html+=`
     
       `,document.getElementById("createMusicArtist"));
     
-      $('#createMusicArtist').show();
+    $('#createMusicArtist').show();
     $('#MusicList').hide();
+    $('#updateArtist').hide();
     $('#ViewList').hide();
     $('#musicRecent').hide();  
     $('#MusicHome').hide();  
@@ -551,6 +591,51 @@ html+=`
     $('#homepage').hide();       
   
   }
+
+ updateArtist(id){
+
+  id = id - 1;
+    let html = `
+
+    <div class="row">
+      <div class="input-field col s6">
+        <h5><B>Basic Info:</B></h5>
+        <tr>
+        <input id="ArtistName3" type="text" class="validate" value="${this.home[id].image}"></div>
+        <input id="ArtistName" type="text" class="validate" value="${this.home[id].StageName}"></div>
+         <input id="ArtistName1" type="text" class="validate" value="${this.home[id].RealName}"></div>
+          <input id="ArtistName2" type="text" class="validate" value="${this.home[id].Birthday}"></div>
+          <input id="ArtistName4" type="text" class="validate" value="${this.home[id].Genres}"></div>
+          <div class="input-field col s6">
+            <h5><B>Description!</B></h5>
+
+            
+            <input id="MusicDescription" type="text" class="validate" value="${this.home[id].Description}"></div>
+    </div>
+      <a onclick="component.updateArtistNow(${id})" class="waves-effect blue waves-light btn">Update</a>
+
+`;  
+    this.reRender(`
+
+      ${html}
+
+    `,document.getElementById("updateArtist"));   
+
+      
+    $('#createMusicArtist').hide();
+    $('#MusicList').hide();
+    $('#updateArtist').show();
+    $('#ViewList').hide();
+    $('#musicRecent').hide();  
+    $('#MusicHome').hide();  
+    $('#homepage').hide();     
+    $('#homepage').hide();       
+  
+}
+
+
+
+
 
   homepage(){
       let html = `
@@ -564,6 +649,7 @@ html+=`
     
     $('#createMusicArtist').hide();
     $('#MusicList').hide();
+    $('#updateArtist').hide();
     $('#ViewList').hide();
     $('#musicRecent').show();  
     $('#MusicHome').hide();  
